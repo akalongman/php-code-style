@@ -1,0 +1,11 @@
+{
+    "name": "longman/php-code-style",
+    "type": "library",
+    "description": "Longish Code style configurations",
+    "license": "MIT",
+    "require": {
+        "squizlabs/php_codesniffer": "~2.9"
+    },
+    "require-dev": {},
+    "autoload": {}
+}
