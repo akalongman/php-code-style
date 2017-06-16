@@ -30,4 +30,4 @@ Configuration file: *longish.phpcs.xml*
     </ruleset>
     ```
 
-* This is a modified version of (Prezly Code Style)[https://github.com/prezly/code-style]
+* This is a modified version of [Prezly Code Style](https://github.com/prezly/code-style)
