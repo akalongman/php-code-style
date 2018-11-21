@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="longish-php-code-style">
-
+<ruleset name="longish-php-code-style" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="phpcs.xsd">
     <description>Longish PHP Code Style preset</description>
 
     <arg name="colors"/>
+
+    <!--
+      Ensures a file declare new symbols and causes no other side effects,
+      or executes logic with side effects, but not both.
+    -->
+    <rule ref="PSR1.Files.SideEffects"/>
 
     <rule ref="PSR2">
         <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
@@ -19,6 +24,14 @@
     <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
 
     <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+    <!--
+      Ensures that switch statements are defined according to PSR2.
+    -->
+    <rule ref="PSR2.ControlStructures.SwitchDeclaration">
+        <properties>
+            <property name="indent" value="4"/>
+        </properties>
+    </rule>
 
     <rule ref="Generic.Files.ByteOrderMark"/>
     <rule ref="Generic.Files.LineEndings"/>
@@ -44,11 +57,8 @@
         <type>warning</type>
     </rule>
     -->
-
     <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
-    <rule ref="Generic.Formatting.SpaceAfterCast.NoSpace">
-        <priority>warning</priority>
-    </rule>
+    <rule ref="Generic.Formatting.SpaceAfterCast.NoSpace"/>
 
     <rule ref="Generic.Functions.CallTimePassByReference"/>
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
@@ -79,6 +89,17 @@
     <rule ref="Generic.PHP.ForbiddenFunctions"/>
     <rule ref="Generic.PHP.LowerCaseConstant"/>
     <rule ref="Generic.PHP.NoSilencedErrors"/>
+    <!-- Ban some functions -->
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="sizeof" value="count"/>
+                <element key="delete" value="unset"/>
+                <element key="print" value="echo"/>
+                <element key="create_function" value="null"/>
+            </property>
+        </properties>
+    </rule>
 
     <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
 
@@ -97,9 +118,7 @@
     <rule ref="Generic.Classes.DuplicateClassName"/>
 
     <rule ref="PEAR.Commenting.InlineComment"/>
-
     <rule ref="PEAR.ControlStructures.MultiLineCondition"/>
-
     <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
 
     <rule ref="MySource.PHP.EvalObjectFactory"/>
@@ -119,6 +138,14 @@
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
     -->
     <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+    <!--
+      Ignore errors like "Expected 1 space before "?"; newline found (Squiz.WhiteSpace.OperatorSpacing.SpacingBefore)"
+    -->
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true"/>
+        </properties>
+    </rule>
 
     <rule ref="Squiz.Scope.StaticThisUsage"/>
 
@@ -128,5 +155,66 @@
             <property name="ignoreNewlines" value="true"/>
         </properties>
     </rule>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
+
+
+    <!--
+    Extra rules from https://github.com/slevomat/coding-standard
+    -->
+    <config name="installed_paths" value="../../slevomat/coding-standard"/>
+
+    <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly" />
+
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="newlinesCountBetweenOpenTagAndDeclare" value="1"/>
+            <property name="newlinesCountAfterDeclare" value="2"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEqualOperators"></rule>
+
+    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"></rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"></rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses"></rule>
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"></rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"></rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"></rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
+    <rule ref="SlevomatCodingStandard.Namespaces.RequireOneNamespaceInFile"></rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing">
+        <properties>
+            <property name="linesCountBeforeNamespace" value="1"/>
+            <property name="linesCountAfterNamespace" value="1"/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
+        <properties>
+            <property name="linesCountBeforeFirstUse" value="1"/>
+            <property name="linesCountAfterLastUse" value="1"/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"></rule>
+    <!--<rule ref="SlevomatCodingStandard.PHP.ShortList"></rule>-->
+    <rule ref="SlevomatCodingStandard.PHP.TypeCast"></rule>
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"></rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing"></rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"></rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"></rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"></rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"></rule>
+    <rule ref="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces">
+        <properties>
+            <property name="linesCountAfterOpeningBrace" value="0"/>
+            <property name="linesCountBeforeClosingBrace" value="0"/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"></rule>
+    <rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
+        <properties>
+            <property name="forbiddenAnnotations" type="array" value="@author,@created,@version,@package,@copyright,@license"/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"></rule>
 
 </ruleset>
