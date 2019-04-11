@@ -4,8 +4,7 @@
     "description": "Longish Code style configurations",
     "license": "MIT",
     "require": {
-        "squizlabs/php_codesniffer": "^3.3",
-        "slevomat/coding-standard": "^4.8"
+        "slevomat/coding-standard": "^5.0"
     },
     "require-dev": {},
     "autoload": {}
