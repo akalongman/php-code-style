@@ -11,6 +11,7 @@
     <rule ref="PSR2">
         <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
     </rule>
+    <rule ref="PSR12"/>
 
     <rule ref="Generic.CodeAnalysis.EmptyStatement">
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCATCH"/>
@@ -136,6 +137,7 @@
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
     -->
     <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+
     <!--
       Ignore errors like "Expected 1 space before "?"; newline found (Squiz.WhiteSpace.OperatorSpacing.SpacingBefore)"
     -->
@@ -157,12 +159,21 @@
 
 
     <!--
-    Extra rules from https://github.com/slevomat/coding-standard
+        Extra rules from https://github.com/slevomat/coding-standard
     -->
+
     <config name="installed_paths" value="../../slevomat/coding-standard"/>
 
-    <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly" />
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintstypehintdeclaration- -->
+    <!--<rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration" />-->
 
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsuselessconstanttypehint- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardexceptionsreferencethrowableonly- -->
+    <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsdeclarestricttypes- -->
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="newlinesCountBetweenOpenTagAndDeclare" value="1"/>
@@ -170,49 +181,207 @@
             <property name="spacesCountAroundEqualsSign" value="0"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEqualOperators"></rule>
 
-    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"></rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"></rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses"></rule>
-    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"></rule>
-    <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"></rule>
-    <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"></rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
-    <rule ref="SlevomatCodingStandard.Namespaces.RequireOneNamespaceInFile"></rule>
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardarraysdisallowimplicitarraycreation -->
+    <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesdisallowlatestaticbindingforconstants- -->
+    <rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesuselesslatestaticbinding- -->
+    <rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding"/>
+
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresdisallowcontinuewithoutintegeroperandinswitch- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresrequirenullcoalesceoperator- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresearlyexit- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionsstaticclosure- -->
+    <rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardoperatorsdisallowequaloperators- -->
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardoperatorsrequirecombinedassignmentoperator- -->
+    <rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesunusedprivateelements- -->
+    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionsunusedinheritedvariablepassedtoclosure- -->
+    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesunuseduses- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesusefromsamenamespace- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesuselessalias- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardphpuselessparentheses- -->
+    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardphpoptimizedfunctionswithoutunpacking -->
+    <rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardphpuselesssemicolon- -->
+    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardvariablesduplicateassignmenttovariable -->
+    <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardvariablesunusedvariable -->
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable">
+        <properties>
+            <property name="ignoreUnusedValuesWhenOnlyKeysAreUsedInForeach" value="true"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardexceptionsdeadcatch -->
+    <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardarraystrailingarraycomma- -->
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesmodernclassnamereference- -->
+    <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassestraitusespacing- -->
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
+        <properties>
+            <property name="linesCountBeforeFirstUse" value="0"/>
+            <property name="linesCountBetweenUses" value="0"/>
+            <property name="linesCountAfterLastUse" value="1"/>
+            <property name="linesCountAfterLastUseWhenLastInClass" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructureslanguageconstructwithparentheses- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresnewwithparentheses- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresrequireshortternaryoperator- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireShortTernaryOperator"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresdisallowyodacomparisonrequireyodacomparison- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionstrailingcommaincall- -->
+    <rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesalphabeticallysorteduses- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesrequireonenamespaceinfile -->
+    <rule ref="SlevomatCodingStandard.Namespaces.RequireOneNamespaceInFile"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesnamespacedeclaration- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceDeclaration"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesnamespacespacing- -->
     <rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing">
         <properties>
             <property name="linesCountBeforeNamespace" value="1"/>
             <property name="linesCountAfterNamespace" value="1"/>
         </properties>
     </rule>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesusespacing- -->
     <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
         <properties>
             <property name="linesCountBeforeFirstUse" value="1"/>
+            <property name="linesCountBetweenUseTypes" value="0"/>
             <property name="linesCountAfterLastUse" value="1"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"></rule>
-    <!--<rule ref="SlevomatCodingStandard.PHP.ShortList"></rule>-->
-    <rule ref="SlevomatCodingStandard.PHP.TypeCast"></rule>
-    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"></rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing"></rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"></rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"></rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"></rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"></rule>
-    <rule ref="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces">
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardoperatorsspreadoperatorspacing- -->
+    <rule ref="SlevomatCodingStandard.Operators.SpreadOperatorSpacing">
+        <properties>
+            <property name="spacesCountAfterOperator" value="0"/>
+        </properties>
+    </rule>
+
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintslongtypehints- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsnulltypehintonlastposition- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardphpshortlist- -->
+    <rule ref="SlevomatCodingStandard.PHP.ShortList"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardphptypecast- -->
+    <rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesclassconstantvisibility- -->
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsreturntypehintspacing- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+        <properties>
+            <property name="spacesCountBeforeColon" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsnullabletypefornulldefaultvalue- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsparametertypehintspacing- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesdisallowgroupuse -->
+    <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesfullyqualifiedglobalconstants- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesfullyqualifiedglobalfunctions- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesusedoesnotstartwithbackslash- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsreturntypehintspacing- -->
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
         <properties>
             <property name="linesCountAfterOpeningBrace" value="0"/>
             <property name="linesCountBeforeClosingBrace" value="0"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"></rule>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesfullyqualifiedclassnameinannotation- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcommentingforbiddenannotations- -->
     <rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
         <properties>
             <property name="forbiddenAnnotations" type="array" value="@author,@created,@version,@package,@copyright,@license"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"></rule>
 
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcommentingforbiddencomments- -->
+    <rule ref="SlevomatCodingStandard.Commenting.ForbiddenComments"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcommentinginlinedoccommentdeclaration- -->
+    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcommentingrequireonelinepropertydoccomment- -->
+    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcommentinguselessinheritdoccomment- -->
+    <rule ref="SlevomatCodingStandard.Commenting.UselessInheritDocComment"/>
+
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresuselessternaryoperator- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator"/>
 </ruleset>
