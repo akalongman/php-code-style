@@ -17,37 +17,41 @@
     <rule ref="PEAR.Functions.ValidDefaultValue.NotAtEnd">
         <exclude-pattern>/app/Http/*</exclude-pattern>
     </rule>
-    <rule ref="Squiz.Strings.ConcatenationSpacing">
+
+    <!--
+      Disallows to complex function determined by the cyclomatic complexity
+      (McCabe, http://en.wikipedia.org/wiki/Cyclomatic_complexity) of that function.
+    -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
         <properties>
-            <property name="spacing" value="0"/>
-            <property name="ignoreNewlines" value="true"/>
+            <property name="complexity" value="6"/>
+            <property name="absoluteComplexity" value="10"/>
         </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing">
-        <exclude-pattern>*/*</exclude-pattern>
+
+    <!--
+      Defines a maximum $nestingLevel and $absoluteNestingLevel for functions.
+    -->
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="nestingLevel" value="6"/>
+            <property name="absoluteNestingLevel" value="10"/>
+        </properties>
     </rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
-        <exclude-pattern>*/*</exclude-pattern>
-    </rule>
-    <rule ref="Squiz.NamingConventions.ValidVariableName"/>
+
+    <!--
+      Extra rules from https://github.com/slevomat/coding-standard
+    -->
     <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly">
         <exclude-pattern>/app/Exceptions/Handler.php</exclude-pattern>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
-        <exclude-pattern>/database/migrations/*</exclude-pattern>
-        <exclude-pattern>/config/*</exclude-pattern>
-    </rule>
-    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
-        <exclude-pattern>/database/migrations/*</exclude-pattern>
-    </rule>
+
     <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
-        <exclude-pattern>/tests/*</exclude-pattern>
         <properties>
-            <property name="rootNamespaces" type="array" value="app=>App"/>
-            <property name="skipDirs" type="array" value="database"/>
+            <property name="rootNamespaces" type="array">
+                <element key="app" value="App"/>
+                <element key="tests" value="Tests"/>
+            </property>
         </properties>
-    </rule>
-    <rule ref="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces">
-        <exclude-pattern>/database/migrations/*</exclude-pattern>
     </rule>
 </ruleset>
