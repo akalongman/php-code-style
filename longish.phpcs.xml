@@ -344,10 +344,10 @@
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesfullyqualifiedglobalconstants- -->
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants"/>
+    <!--<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants"/>-->
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesfullyqualifiedglobalfunctions- -->
-    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions"/>
+    <!--<rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions"/>-->
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesusedoesnotstartwithbackslash- -->
     <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
