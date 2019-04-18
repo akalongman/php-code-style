@@ -276,7 +276,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionstrailingcommaincall- -->
-    <rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>
+    <!--<rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>-->
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesalphabeticallysorteduses- -->
     <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
