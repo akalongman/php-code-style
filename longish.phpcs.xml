@@ -185,9 +185,6 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardarraysdisallowimplicitarraycreation -->
     <rule ref="SlevomatCodingStandard.Arrays.DisallowImplicitArrayCreation"/>
 
-    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesdisallowlatestaticbindingforconstants- -->
-    <rule ref="SlevomatCodingStandard.Classes.DisallowLateStaticBindingForConstants"/>
-
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesuselesslatestaticbinding- -->
     <rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding"/>
 
