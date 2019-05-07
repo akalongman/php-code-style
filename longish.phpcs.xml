@@ -308,7 +308,6 @@
         </properties>
     </rule>
 
-
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintslongtypehints- -->
     <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
 
