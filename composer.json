@@ -8,5 +8,13 @@
         "slevomat/coding-standard": "^5.0"
     },
     "require-dev": {},
-    "autoload": {}
+    "autoload": {},
+    "config": {
+        "sort-packages": true,
+        "process-timeout": 3600
+    },
+    "scripts": {
+        "phpcs": "vendor/bin/phpcs --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 Examples/",
+        "phpcbf": "vendor/bin/phpcbf --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 Examples/"
+    }
 }
