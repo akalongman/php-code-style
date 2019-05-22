@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Longman\LongishStandard\Sniffs\Commenting;
+namespace LongishCodingStandard\Sniffs\Commenting;
 
 use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;

@@ -1,6 +1,6 @@
 {
     "name": "longman/php-code-style",
-    "type": "library",
+    "type": "phpcodesniffer-standard",
     "description": "Longish Code style configurations",
     "license": "MIT",
     "require": {
@@ -10,7 +10,11 @@
     "require-dev": {
         "symfony/var-dumper": "^4.2"
     },
-    "autoload": {},
+    "autoload": {
+        "psr-4": {
+            "LongishCodingStandard\\": "src/LongishCodingStandard"
+        }
+    },
     "config": {
         "sort-packages": true,
         "process-timeout": 3600

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Longman\LongishStandard\Sniffs\ControlStructures;
+namespace LongishCodingStandard\Sniffs\ControlStructures;
 
 use Exception;
 use PHP_CodeSniffer\Files\File;
@@ -10,7 +10,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 use function str_repeat;
 use const T_WHITESPACE;
 
-class ControlStructureBooleanNotSpacingSniff implements Sniff
+class BooleanNotSpacingSniff implements Sniff
 {
     public $requiredSpacesAfterBooleanNot = 1;
 

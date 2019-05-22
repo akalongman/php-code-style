@@ -162,7 +162,7 @@
         Extra rules from https://github.com/slevomat/coding-standard
     -->
 
-    <config name="installed_paths" value="../../slevomat/coding-standard"/>
+    <config name="installed_paths" value="../../../src,../../slevomat/coding-standard"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintstypehintdeclaration- -->
     <!--<rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration" />-->
@@ -384,4 +384,9 @@
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresuselessternaryoperator- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator"/>
+
+
+    <!-- Extra custom rules -->
+    <rule ref="LongishCodingStandard.ControlStructures.BooleanNotSpacing"/>
+
 </ruleset>

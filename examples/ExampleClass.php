@@ -28,8 +28,8 @@ class ExampleClass
 
     public function someMethod(bool $var1, bool $var2): void
     {
-        # Value needs to be an array.
-        if (! ($var1 && $var2)) {
+        // Value needs to be an array.
+        if (! $var1) {
             print_r($this->datetime);
         }
     }
