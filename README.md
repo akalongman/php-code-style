@@ -38,3 +38,7 @@ Configuration file: *longish.phpcs.xml*
 
 </ruleset>
 ```
+
+Running validation (Laravel example):
+
+    vendor/bin/phpcs --standard=vendor/longman/php-code-style/laravel.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 app/
