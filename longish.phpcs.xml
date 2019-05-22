@@ -196,7 +196,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresearlyexit- -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit"/>
+    <!--<rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit"/>-->
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionsstaticclosure- -->
     <rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
