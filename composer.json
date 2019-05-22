@@ -7,14 +7,16 @@
         "php": "^7.1",
         "slevomat/coding-standard": "^5.0"
     },
-    "require-dev": {},
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    },
     "autoload": {},
     "config": {
         "sort-packages": true,
         "process-timeout": 3600
     },
     "scripts": {
-        "phpcs": "vendor/bin/phpcs --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 Examples/",
-        "phpcbf": "vendor/bin/phpcbf --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 Examples/"
+        "phpcs": "vendor/bin/phpcs --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 examples/",
+        "phpcbf": "vendor/bin/phpcbf --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 examples/"
     }
 }

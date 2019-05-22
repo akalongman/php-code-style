@@ -26,9 +26,10 @@ class ExampleClass
         $this->datetime = $datetime;
     }
 
-    public function someMethod(bool $var1): void
+    public function someMethod(bool $var1, bool $var2): void
     {
-        if (!$var1) {
+        # Value needs to be an array.
+        if (! ($var1 && $var2)) {
             print_r($this->datetime);
         }
     }
