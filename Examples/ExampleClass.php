@@ -13,6 +13,8 @@ namespace Examples;
 
 use DateTime;
 
+use function print_r;
+
 class ExampleClass
 {
     private $datetime;
@@ -27,7 +29,7 @@ class ExampleClass
     public function someMethod(bool $var1): void
     {
         if (!$var1) {
-            var_dump($this->datetime);
+            print_r($this->datetime);
         }
     }
 }

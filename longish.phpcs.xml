@@ -196,7 +196,9 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresearlyexit- -->
-    <!--<rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit"/>-->
+    <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit">
+        <type>warning</type>
+    </rule>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionsstaticclosure- -->
     <rule ref="SlevomatCodingStandard.Functions.StaticClosure"/>
@@ -273,7 +275,9 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionstrailingcommaincall- -->
-    <!--<rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>-->
+    <rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall">
+        <type>warning</type>
+    </rule>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesalphabeticallysorteduses- -->
     <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
