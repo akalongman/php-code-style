@@ -159,10 +159,11 @@
 
 
     <!--
+        Extra rules from src
         Extra rules from https://github.com/slevomat/coding-standard
     -->
 
-    <config name="installed_paths" value="../../../src,../../slevomat/coding-standard"/>
+    <config name="installed_paths" value="../../longman/php-code-style/src,../../slevomat/coding-standard"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintstypehintdeclaration- -->
     <!--<rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration" />-->

@@ -20,7 +20,7 @@
         "process-timeout": 3600
     },
     "scripts": {
-        "phpcs": "vendor/bin/phpcs --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 examples/",
-        "phpcbf": "vendor/bin/phpcbf --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors --parallel=32 examples/"
+        "phpcs": "vendor/bin/phpcs --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors examples/",
+        "phpcbf": "vendor/bin/phpcbf --standard=longish.phpcs.xml -spn --encoding=utf-8 --report-width=150 --colors examples/"
     }
 }
