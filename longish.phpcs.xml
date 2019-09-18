@@ -386,6 +386,8 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresuselessternaryoperator- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.UselessTernaryOperator"/>
 
+    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesmultipleusesperline -->
+    <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine"/>
 
     <!-- Extra custom rules -->
     <rule ref="LongishCodingStandard.ControlStructures.BooleanNotSpacing"/>
