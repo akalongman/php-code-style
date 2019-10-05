@@ -1,7 +1,7 @@
 Longish code style configuration
 ================================
 
-This is a [PSR-2](http://www.php-fig.org/psr/psr-2/) standard based code style ruleset for [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+This is a [PSR-12](http://www.php-fig.org/psr/psr-12/) standard based code style ruleset for [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 
 PHP Code Sniffer
 ----------------
