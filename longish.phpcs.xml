@@ -2,15 +2,6 @@
 <ruleset name="longish-php-code-style" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="phpcs.xsd">
     <description>Longish PHP Code Style preset</description>
 
-    <!--
-      Ensures a file declare new symbols and causes no other side effects,
-      or executes logic with side effects, but not both.
-    -->
-    <rule ref="PSR1.Files.SideEffects"/>
-
-    <rule ref="PSR2">
-        <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
-    </rule>
     <rule ref="PSR12"/>
 
     <rule ref="Generic.CodeAnalysis.EmptyStatement">
