@@ -54,4 +54,6 @@
             </property>
         </properties>
     </rule>
+
+    <exclude-pattern>*\.blade\.php$</exclude-pattern>
 </ruleset>

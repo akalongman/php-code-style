@@ -257,9 +257,6 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructureslanguageconstructwithparentheses- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
 
-    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresnewwithparentheses- -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.NewWithParentheses"/>
-
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresrequireshortternaryoperator- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireShortTernaryOperator"/>
 
