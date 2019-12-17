@@ -383,6 +383,21 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesmultipleusesperline -->
     <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine"/>
 
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcommentingrequireonelinepropertydoccomment- -->
+    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment">
+        <exclude-pattern>*/*</exclude-pattern>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcommentinginlinedoccommentdeclaration- -->
+    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration">
+        <exclude-pattern>*/*</exclude-pattern>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphpuselessparentheses- -->
+    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
+        <exclude-pattern>*/*</exclude-pattern>
+    </rule>
+
     <!-- Extra custom rules -->
     <rule ref="LongishCodingStandard.ControlStructures.BooleanNotSpacing"/>
 

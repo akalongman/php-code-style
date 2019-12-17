@@ -55,5 +55,9 @@
         </properties>
     </rule>
 
+    <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
+        <exclude-pattern>database/*</exclude-pattern>
+    </rule>
+
     <exclude-pattern>*\.blade\.php$</exclude-pattern>
 </ruleset>
