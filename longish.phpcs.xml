@@ -12,6 +12,12 @@
         </properties>
     </rule>
 
+    <rule ref="Generic.Arrays.ArrayIndent">
+        <properties>
+            <property name="indent" value="4" />
+        </properties>
+    </rule>
+
     <rule ref="Generic.CodeAnalysis.EmptyStatement">
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCATCH"/>
     </rule>
