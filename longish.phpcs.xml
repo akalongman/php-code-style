@@ -98,6 +98,7 @@
     </rule>
 
     <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
+    <rule ref="Generic.Formatting.SpaceAfterNot"/>
 
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
     <rule ref="Generic.WhiteSpace.ScopeIndent"/>
