@@ -410,7 +410,4 @@
         <exclude-pattern>*/*</exclude-pattern>
     </rule>
 
-    <!-- Extra custom rules -->
-    <rule ref="LongishCodingStandard.ControlStructures.BooleanNotSpacing"/>
-
 </ruleset>
