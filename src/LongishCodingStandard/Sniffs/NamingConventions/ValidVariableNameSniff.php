@@ -6,6 +6,7 @@ namespace LongishCodingStandard\Sniffs\NamingConventions;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\AbstractVariableSniff;
+use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Util\Common;
 
 use function ltrim;
@@ -14,7 +15,7 @@ use function preg_match_all;
 use const T_DOUBLE_COLON;
 use const T_WHITESPACE;
 
-class ValidVariableNameSniff extends AbstractVariableSniff
+class ValidVariableNameSniff extends AbstractVariableSniff implements Sniff
 {
     /**
      * @var array

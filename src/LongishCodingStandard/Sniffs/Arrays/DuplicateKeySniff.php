@@ -6,6 +6,7 @@ namespace LongishCodingStandard\Sniffs\Arrays;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\AbstractArraySniff;
+use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Util\Tokens;
 
 use function in_array;
@@ -20,7 +21,7 @@ use const T_CONSTANT_ENCAPSED_STRING;
 use const T_DOUBLE_QUOTED_STRING;
 use const T_VARIABLE;
 
-class DuplicateKeySniff extends AbstractArraySniff
+class DuplicateKeySniff extends AbstractArraySniff implements Sniff
 {
     private const ALLOWED_CHARS = '/(?<!\\\\)(?:\\\\{2})*\\\(?:[0-7nrftve]|x[A-Fa-f0-9])/';
 
