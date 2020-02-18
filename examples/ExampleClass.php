@@ -45,5 +45,7 @@ class ExampleClass
     public function someMethod3(string $var1, string $var2): void
     {
         $str = \str_replace('a', $var2, $var1);
+
+        $str_asd = 1;
     }
 }
