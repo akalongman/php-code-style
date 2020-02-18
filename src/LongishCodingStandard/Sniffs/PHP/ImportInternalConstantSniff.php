@@ -64,7 +64,7 @@ class ImportInternalConstantSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        $currentNamespacePtr = null;
+        $currentNamespacePtr = 0;
         $constantsToImport = [];
 
         do {

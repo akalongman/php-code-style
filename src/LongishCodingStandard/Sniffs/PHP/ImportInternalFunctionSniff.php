@@ -64,7 +64,7 @@ class ImportInternalFunctionSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        $currentNamespacePtr = null;
+        $currentNamespacePtr = 0;
         $functionsToImport = [];
 
         do {
@@ -227,7 +227,7 @@ class ImportInternalFunctionSniff implements Sniff
     /**
      * @param string[] $functionNames
      */
-    private function importFunctions(File $phpcsFile, int $namespacePtr, array $functionNames): void
+    private function importFunctions(File $phpcsFile, ?int $namespacePtr, array $functionNames): void
     {
         if (! $functionNames) {
             return;
