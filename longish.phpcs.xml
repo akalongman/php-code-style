@@ -450,11 +450,10 @@
         <exclude-pattern>*/*</exclude-pattern>
     </rule>
 
-    <!-- Extra custom rules -->
-    <rule ref="LongishCodingStandard.ControlStructures.BooleanNotSpacing"/>
-    <rule ref="LongishCodingStandard.Arrays.DuplicateKeySniff"/>
-    <rule ref="LongishCodingStandard.NamingConventions.ValidVariableNameSniff"/>
-    <rule ref="LongishCodingStandard.PHP.ImportInternalConstantSniff"/>
-    <rule ref="LongishCodingStandard.PHP.ImportInternalFunctionSniff"/>
+    <!-- LongishCodingStandard rules -->
+    <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>
+    <rule ref="LongishCodingStandard.NamingConventions.ValidVariableName"/>
+    <rule ref="LongishCodingStandard.PHP.ImportInternalConstant"/>
+    <rule ref="LongishCodingStandard.PHP.ImportInternalFunction"/>
 
 </ruleset>

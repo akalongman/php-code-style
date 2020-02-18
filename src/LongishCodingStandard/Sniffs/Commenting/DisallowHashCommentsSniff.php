@@ -1,10 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace LongishCodingStandard\Sniffs\Commenting;
 
-use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
 
 class DisallowHashCommentsSniff implements Sniff
 {

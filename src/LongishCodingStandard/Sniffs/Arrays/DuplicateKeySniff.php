@@ -26,7 +26,7 @@ class DuplicateKeySniff extends AbstractArraySniff implements Sniff
     private const ALLOWED_CHARS = '/(?<!\\\\)(?:\\\\{2})*\\\(?:[0-7nrftve]|x[A-Fa-f0-9])/';
 
     /**
-     * @param File $phpcsFile
+     * @param \PHP_CodeSniffer\Files\File $phpcsFile
      * @param int $stackPtr
      * @param int $arrayStart
      * @param int $arrayEnd

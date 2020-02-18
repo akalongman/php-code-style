@@ -33,4 +33,17 @@ class ExampleClass
             print_r($this->datetime);
         }
     }
+
+    public function someMethod2(bool $var1, bool $var2): void
+    {
+        $array = [
+            'aaa1' => 1,
+            'aaa1' => 2,
+        ];
+    }
+
+    public function someMethod3(string $var1, string $var2): void
+    {
+        $str = \str_replace('a', $var2, $var1);
+    }
 }

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace LongishCodingStandard\Helpers;
 
+use LongishCodingStandard\CodingStandard;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Util\Tokens;
-use LongishCodingStandard\CodingStandard;
 
 use function array_flip;
 use function array_walk_recursive;
@@ -30,7 +30,7 @@ use const T_USE;
  */
 trait NamespacesTrait
 {
-    private function getNamespace(File $phpcsFile, int $stackPtr) : string
+    private function getNamespace(File $phpcsFile, int $stackPtr): string
     {
         if ($nsStart = $phpcsFile->findPrevious(T_NAMESPACE, $stackPtr - 1)) {
             return $this->getName($phpcsFile, $nsStart + 1);
@@ -48,7 +48,7 @@ trait NamespacesTrait
      *     }
      * }
      */
-    private function getGlobalUses(File $phpcsFile, int $stackPtr = 0, string $type = 'class') : array
+    private function getGlobalUses(File $phpcsFile, int $stackPtr = 0, string $type = 'class'): array
     {
         $first = 0;
         $last = $phpcsFile->numTokens;
@@ -110,22 +110,22 @@ trait NamespacesTrait
 
             $imports[$useType][$useType === 'const' ? strtoupper($alias) : strtolower($alias)] = [
                 'name' => $alias,
-                'fqn' => $name,
-                'ptr' => $use,
+                'fqn'  => $name,
+                'ptr'  => $use,
             ];
         }
 
         return $type === 'all' ? $imports : ($imports[$type] ?? []);
     }
 
-    private function getAliasFromName(string $name) : string
+    private function getAliasFromName(string $name): string
     {
         return strrchr($name, '\\') === false
             ? $name
             : substr(strrchr($name, '\\'), 1);
     }
 
-    private function getName(File $phpcsFile, int $stackPtr) : string
+    private function getName(File $phpcsFile, int $stackPtr): string
     {
         $tokens = $phpcsFile->getTokens();
 
@@ -145,14 +145,14 @@ trait NamespacesTrait
         return ltrim($class, '\\');
     }
 
-    private function getBuiltInFunctions() : array
+    private function getBuiltInFunctions(): array
     {
         $allFunctions = get_defined_functions();
 
         return array_flip($allFunctions['internal']);
     }
 
-    private function getBuiltInConstants() : array
+    private function getBuiltInConstants(): array
     {
         $allConstants = get_defined_constants(true);
 

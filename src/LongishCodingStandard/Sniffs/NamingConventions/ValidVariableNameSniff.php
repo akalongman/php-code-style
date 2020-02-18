@@ -21,21 +21,21 @@ class ValidVariableNameSniff extends AbstractVariableSniff implements Sniff
      * @var array
      */
     protected $phpReservedVars = [
-        '_SERVER' => true,
-        '_GET' => true,
-        '_POST' => true,
+        '_SERVER'  => true,
+        '_GET'     => true,
+        '_POST'    => true,
         '_REQUEST' => true,
         '_SESSION' => true,
-        '_ENV' => true,
-        '_COOKIE' => true,
-        '_FILES' => true,
-        'GLOBALS' => true,
+        '_ENV'     => true,
+        '_COOKIE'  => true,
+        '_FILES'   => true,
+        'GLOBALS'  => true,
     ];
 
     /**
      * @param int $stackPtr
      */
-    protected function processVariable(File $phpcsFile, $stackPtr) : void
+    protected function processVariable(File $phpcsFile, $stackPtr): void
     {
         $tokens = $phpcsFile->getTokens();
         $varName = ltrim($tokens[$stackPtr]['content'], '$');
@@ -60,7 +60,7 @@ class ValidVariableNameSniff extends AbstractVariableSniff implements Sniff
     /**
      * @param int $stackPtr
      */
-    protected function processMemberVar(File $phpcsFile, $stackPtr) : void
+    protected function processMemberVar(File $phpcsFile, $stackPtr): void
     {
         $tokens = $phpcsFile->getTokens();
         $varName = ltrim($tokens[$stackPtr]['content'], '$');
@@ -75,7 +75,7 @@ class ValidVariableNameSniff extends AbstractVariableSniff implements Sniff
     /**
      * @param int $stackPtr
      */
-    protected function processVariableInString(File $phpcsFile, $stackPtr) : void
+    protected function processVariableInString(File $phpcsFile, $stackPtr): void
     {
         $tokens = $phpcsFile->getTokens();
         $content = $tokens[$stackPtr]['content'];
