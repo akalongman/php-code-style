@@ -451,6 +451,7 @@
     </rule>
 
     <!-- Extra custom rules -->
+    <rule ref="LongishCodingStandard.ControlStructures.BooleanNotSpacing"/>
     <rule ref="LongishCodingStandard.Arrays.DuplicateKeySniff"/>
     <rule ref="LongishCodingStandard.NamingConventions.ValidVariableNameSniff"/>
     <rule ref="LongishCodingStandard.PHP.ImportInternalConstantSniff"/>
