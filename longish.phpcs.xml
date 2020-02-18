@@ -192,9 +192,30 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesuselesslatestaticbinding- -->
     <rule ref="SlevomatCodingStandard.Classes.UselessLateStaticBinding"/>
 
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesclassstructure- -->
+    <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
+        <properties>
+            <property name="groups" type="array">
+                <element value="uses"/>
+                <element value="public constants"/>
+                <element value="protected constants"/>
+                <element value="private constants"/>
+                <element value="public properties, public static properties, protected properties, protected static properties, private properties, private static properties"/>
+                <element value="constructor, static constructors"/>
+                <element value="public methods, public static methods, public static abstract methods, public abstract methods, protected methods, protected static methods, protected static abstract methods, protected abstract methods, private methods, private static methods"/>
+                <element value="protected methods, protected static methods, protected static abstract methods, protected abstract methods, private methods, private static methods"/>
+                <element value="private methods, private static methods"/>
+                <element value="magic methods"/>
+                <element value="destructor"/>
+            </property>
+        </properties>
+    </rule>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresdisallowcontinuewithoutintegeroperandinswitch- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowContinueWithoutIntegerOperandInSwitch"/>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcontrolstructuresassignmentincondition -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresrequirenullcoalesceoperator- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
@@ -259,8 +280,21 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardarraystrailingarraycomma- -->
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
 
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardarrayssinglelinearraywhitespace- -->
+    <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
+
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesmodernclassnamereference- -->
     <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardclassespropertyspacing- -->
+    <rule ref="SlevomatCodingStandard.Classes.PropertySpacing">
+        <properties>
+            <property name="minLinesCountBeforeWithComment" value="0"/>
+            <property name="maxLinesCountBeforeWithComment" value="1"/>
+            <property name="minLinesCountBeforeWithoutComment" value="0"/>
+            <property name="maxLinesCountBeforeWithoutComment" value="1"/>
+        </properties>
+    </rule>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassestraitusespacing- -->
     <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
@@ -312,6 +346,9 @@
         </properties>
     </rule>
 
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardnamespacesreferenceusednamesonly- -->
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly"/>
+
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardoperatorsspreadoperatorspacing- -->
     <rule ref="SlevomatCodingStandard.Operators.SpreadOperatorSpacing">
         <properties>
@@ -346,6 +383,9 @@
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsparametertypehintspacing- -->
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardtypehintspropertytypehintspacing- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHintSpacing"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesdisallowgroupuse -->
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
