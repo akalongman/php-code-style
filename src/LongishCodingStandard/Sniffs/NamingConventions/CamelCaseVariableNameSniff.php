@@ -15,7 +15,7 @@ use function preg_match_all;
 use const T_DOUBLE_COLON;
 use const T_WHITESPACE;
 
-class ValidVariableNameSniff extends AbstractVariableSniff implements Sniff
+class CamelCaseVariableNameSniff extends AbstractVariableSniff implements Sniff
 {
     /**
      * @var array

@@ -452,7 +452,7 @@
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>
-    <rule ref="LongishCodingStandard.NamingConventions.ValidVariableName"/>
+    <rule ref="LongishCodingStandard.NamingConventions.CamelCaseVariableName"/>
     <rule ref="LongishCodingStandard.PHP.ImportInternalConstant"/>
     <rule ref="LongishCodingStandard.PHP.ImportInternalFunction"/>
 
