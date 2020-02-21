@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of the PHP Code Style package.
  *
@@ -47,5 +48,39 @@ class ExampleClass
         $str = \str_replace('a', $var2, $var1);
 
         $str_asd = 1;
+    }
+
+    public function someMethod4(string $var1, string $var2): void
+    {
+        $str = $var1{1};
+    }
+
+    public function someMethod5(string $var1, string $var2): void
+    {
+        $str = $var1 .
+            ' asd asd';
+    }
+
+    public function someMethod6(bool $var1, bool $var2): void
+    {
+        if (
+            $var1 &&
+            $var2
+        ) {
+            echo 'zzzz';
+        }
+    }
+
+    public function someMethod7(string $var1, bool $var2): void
+    {
+        switch ($var1) {
+            default:
+                echo 'aaa';
+                break;
+
+            case 'zzzz':
+                echo 'zzzz';
+                break;
+        }
     }
 }

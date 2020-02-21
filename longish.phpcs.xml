@@ -452,8 +452,12 @@
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>
+    <rule ref="LongishCodingStandard.ControlStructures.DefaultAsLast"/>
     <rule ref="LongishCodingStandard.NamingConventions.CamelCaseVariableName"/>
     <rule ref="LongishCodingStandard.PHP.ImportInternalConstant"/>
     <rule ref="LongishCodingStandard.PHP.ImportInternalFunction"/>
+    <rule ref="LongishCodingStandard.PHP.DisallowCurlyOffsetAccessBrace"/>
+    <rule ref="LongishCodingStandard.Strings.NoConcatenationAtTheEnd"/>
+    <rule ref="LongishCodingStandard.Operators.BooleanOperator"/>
 
 </ruleset>
