@@ -59,5 +59,9 @@
         <exclude-pattern>database/*</exclude-pattern>
     </rule>
 
+    <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
     <exclude-pattern>*\.blade\.php$</exclude-pattern>
 </ruleset>
