@@ -59,6 +59,7 @@
 
     <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
         <exclude-pattern>database/schema/*</exclude-pattern>
+        <exclude-pattern>database/migrations/*</exclude-pattern>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
