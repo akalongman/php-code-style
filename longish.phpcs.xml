@@ -31,18 +31,15 @@
 
     <rule ref="Generic.Files.ByteOrderMark"/>
     <rule ref="Generic.Files.LineEndings"/>
-    <!--
+
     <rule ref="Generic.Files.LineLength">
+        <type>warning</type>
         <properties>
-            <property name="lineLimit" value="120"/>
-            <property name="absoluteLineLimit" value="200"/>
+            <property name="lineLimit" value="80"/>
+            <property name="absoluteLineLimit" value="160"/>
         </properties>
     </rule>
-    -->
-    <rule ref="Generic.Files.LineLength">
-        <exclude name="Generic.Files.LineLength.MaxExceeded"/>
-        <exclude name="Generic.Files.LineLength.TooLong"/>
-    </rule>
+
     <!--
     <rule ref="Generic.Files.LineLength.MaxExceeded">
         <message>Line contains %s chars, which is longer than the max limit of %s</message>
@@ -220,9 +217,17 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresrequirenullcoalesceoperator- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
 
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcontrolstructuresrequirenullcoalesceequaloperator- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceEqualOperator"/>
+
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcontrolstructuresearlyexit- -->
     <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit">
         <type>warning</type>
+        <properties>
+            <property name="ignoreStandaloneIfInScope" value="true"/>
+            <property name="ignoreOneLineTrailingIf" value="true"/>
+            <property name="ignoreTrailingIfWithOneInstruction" value="true"/>
+        </properties>
     </rule>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionsstaticclosure- -->
@@ -233,11 +238,6 @@
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardoperatorsrequirecombinedassignmentoperator- -->
     <rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator"/>
-
-    <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardclassesunusedprivateelements- -->
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements">
-        <type>warning</type>
-    </rule>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionsunusedinheritedvariablepassedtoclosure- -->
     <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"/>
@@ -316,9 +316,7 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardfunctionstrailingcommaincall- -->
-    <rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall">
-        <type>warning</type>
-    </rule>
+    <rule ref="SlevomatCodingStandard.Functions.TrailingCommaInCall"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesalphabeticallysorteduses- -->
     <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
@@ -449,6 +447,70 @@
     <rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
         <exclude-pattern>*/*</exclude-pattern>
     </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsstrictcall -->
+    <rule ref="SlevomatCodingStandard.Functions.StrictCall"/>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsfunctionlength- -->
+    <rule ref="SlevomatCodingStandard.Functions.FunctionLength">
+        <type>warning</type>
+        <properties>
+            <property name="maxLinesLength" value="50"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphpdisallowdirectmagicinvokecall- -->
+    <rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardoperatorsrequireonlystandaloneincrementanddecrementoperators -->
+    <rule ref="SlevomatCodingStandard.Operators.RequireOnlyStandaloneIncrementAndDecrementOperators"/>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsunusedparameter- -->
+    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter">
+        <type>warning</type>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsuselessparameterdefaultvalue- -->
+    <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphprequirenowdoc- -->
+    <rule ref="SlevomatCodingStandard.PHP.RequireNowdoc" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphpoptimizedfunctionswithoutunpacking -->
+    <rule ref="SlevomatCodingStandard.PHP.OptimizedFunctionsWithoutUnpacking" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardvariablesdisallowsuperglobalvariable -->
+    <rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable">
+        <type>warning</type>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardarraysmultilinearrayendbracketplacement- -->
+    <rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesrequiremultilinemethodsignature- -->
+    <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature">
+        <type>warning</type>
+        <properties>
+            <property name="minLineLength" value="120"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesrequiresinglelinemethodsignature- -->
+    <rule ref="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature">
+        <type>warning</type>
+        <properties>
+            <property name="maxLineLength" value="80"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsdisallowemptyfunction -->
+    <rule ref="SlevomatCodingStandard.Functions.DisallowEmptyFunction" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcommentingdeprecatedannotationdeclarationsniff -->
+    <rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclarationSniff" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcontrolstructuresuselessifconditionwithreturn- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.UselessIfConditionWithReturn" />
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>
