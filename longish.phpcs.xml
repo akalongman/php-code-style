@@ -35,8 +35,8 @@
     <rule ref="Generic.Files.LineLength">
         <type>warning</type>
         <properties>
-            <property name="lineLimit" value="80"/>
-            <property name="absoluteLineLimit" value="160"/>
+            <property name="lineLimit" value="160"/>
+            <property name="absoluteLineLimit" value="200"/>
         </properties>
     </rule>
 
@@ -452,12 +452,12 @@
     <rule ref="SlevomatCodingStandard.Functions.StrictCall"/>
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsfunctionlength- -->
-    <rule ref="SlevomatCodingStandard.Functions.FunctionLength">
+    <!--<rule ref="SlevomatCodingStandard.Functions.FunctionLength">
         <type>warning</type>
         <properties>
             <property name="maxLinesLength" value="50"/>
         </properties>
-    </rule>
+    </rule> -->
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphpdisallowdirectmagicinvokecall- -->
     <rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>
@@ -469,9 +469,6 @@
     <rule ref="SlevomatCodingStandard.Functions.UnusedParameter">
         <type>warning</type>
     </rule>
-
-    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsuselessparameterdefaultvalue- -->
-    <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue" />
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphprequirenowdoc- -->
     <rule ref="SlevomatCodingStandard.PHP.RequireNowdoc" />
@@ -491,7 +488,7 @@
     <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature">
         <type>warning</type>
         <properties>
-            <property name="minLineLength" value="120"/>
+            <property name="minLineLength" value="160"/>
         </properties>
     </rule>
 
@@ -507,10 +504,7 @@
     <rule ref="SlevomatCodingStandard.Functions.DisallowEmptyFunction" />
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcommentingdeprecatedannotationdeclarationsniff -->
-    <rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclarationSniff" />
-
-    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcontrolstructuresuselessifconditionwithreturn- -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.UselessIfConditionWithReturn" />
+    <!--<rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclarationSniff" />-->
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>

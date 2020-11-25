@@ -50,7 +50,8 @@
         <properties>
             <property name="rootNamespaces" type="array">
                 <element key="app" value="App"/>
-                <element key="database" value="Database"/>
+                <element key="database/factories" value="Database\Factories"/>
+                <element key="database/seeders" value="Database\Seeders"/>
                 <element key="tests" value="Tests"/>
             </property>
         </properties>
