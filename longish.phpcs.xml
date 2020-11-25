@@ -449,7 +449,9 @@
     </rule>
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsstrictcall -->
-    <rule ref="SlevomatCodingStandard.Functions.StrictCall"/>
+    <rule ref="SlevomatCodingStandard.Functions.StrictCall">
+        <type>warning</type>
+    </rule>
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsfunctionlength- -->
     <!--<rule ref="SlevomatCodingStandard.Functions.FunctionLength">
