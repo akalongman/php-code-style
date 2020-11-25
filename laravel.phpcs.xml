@@ -10,6 +10,7 @@
     </rule>
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
         <exclude-pattern>/database/schema/*</exclude-pattern>
+        <exclude-pattern>/database/migrations/*</exclude-pattern>
     </rule>
     <rule ref="Generic.CodeAnalysis.EmptyStatement.DetectedCatch">
         <exclude-pattern>*/*</exclude-pattern>
@@ -58,8 +59,8 @@
     </rule>
 
     <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
-        <exclude-pattern>database/schema/*</exclude-pattern>
-        <exclude-pattern>database/migrations/*</exclude-pattern>
+        <exclude-pattern>/database/schema/*</exclude-pattern>
+        <exclude-pattern>/database/migrations/*</exclude-pattern>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Classes.ClassStructure">
