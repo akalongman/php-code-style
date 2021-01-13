@@ -4,7 +4,7 @@
     "description": "Longish Code style configurations",
     "license": "MIT",
     "require": {
-        "php": "^7.1",
+        "php": "^7.1|^8.0",
         "slevomat/coding-standard": "^6.1"
     },
     "require-dev": {
