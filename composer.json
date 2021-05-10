@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.1|^8.0",
-        "slevomat/coding-standard": "^6.0"
+        "slevomat/coding-standard": "^7.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.0"
