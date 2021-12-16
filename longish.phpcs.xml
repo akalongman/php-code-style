@@ -473,6 +473,11 @@
         <type>warning</type>
     </rule>
 
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsuselessparameterdefaultvalue- -->
+    <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue">
+        <type>warning</type>
+    </rule>
+
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphprequirenowdoc- -->
     <rule ref="SlevomatCodingStandard.PHP.RequireNowdoc" />
 
@@ -514,6 +519,46 @@
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsrequiretrailingcommaindeclaration- -->
     <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcontrolstructuresjumpstatementsspacing- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing">
+        <properties>
+            <property name="linesCountBeforeFirst" value="0"/>
+            <property name="linesCountBefore" value="1"/>
+            <property name="jumpStatements" type="array">
+                <element value="return"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardtypehintsdisallowarraytypehintsyntax- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardwhitespacesduplicatespaces- -->
+    <rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces">
+        <properties>
+            <property name="ignoreSpacesBeforeAssignment" value="true"/>
+            <property name="ignoreSpacesInParameters" value="true"/>
+            <property name="ignoreSpacesInAnnotation" value="true"/>
+            <property name="ignoreSpacesInComment" value="true"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesparentcallspacing- -->
+    <rule ref="SlevomatCodingStandard.Classes.ParentCallSpacing">
+        <properties>
+            <property name="linesCountAfter" value="1"/>
+            <property name="linesCountAfterLast" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardtypehintsuniontypehintformat- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
+        <properties>
+            <property name="withSpaces" value="no"/>
+            <property name="nullPosition" value="first"/>
+        </properties>
+    </rule>
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>
