@@ -28,39 +28,21 @@ class ImportInternalFunctionSniff implements Sniff
 {
     use NamespacesTrait;
 
-    /**
-     * @var string[] Array of functions to exclude from importing.
-     */
-    public $exclude = [];
-
-    /**
-     * @var array Hash map of all php built in function names.
-     */
-    private $builtInFunctions;
-
-    /**
-     * @var array Array of imported functions in current namespace.
-     */
-    private $importedFunctions;
+    public array $exclude = [];
+    private array $builtInFunctions;
+    private array $importedFunctions = [];
 
     public function __construct()
     {
         $this->builtInFunctions = $this->getBuiltInFunctions();
     }
 
-    /**
-     * @return int[]
-     */
     public function register(): array
     {
         return [T_STRING];
     }
 
-    /**
-     * @param int $stackPtr
-     * @return int
-     */
-    public function process(File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr): int
     {
         $tokens = $phpcsFile->getTokens();
 

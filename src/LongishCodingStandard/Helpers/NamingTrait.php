@@ -18,7 +18,7 @@ use function substr;
  */
 trait NamingTrait
 {
-    private function check(File $phpcsFile, int $stackPtr, string $msg)
+    private function check(File $phpcsFile, int $stackPtr, string $msg): void
     {
         $string = $phpcsFile->getTokens()[$stackPtr]['content'];
 

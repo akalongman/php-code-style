@@ -17,7 +17,7 @@
             <property name="indent" value="4" />
         </properties>
     </rule>
-
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
     <rule ref="Generic.CodeAnalysis.EmptyStatement">
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedCATCH"/>
     </rule>
@@ -157,6 +157,7 @@
         </properties>
     </rule>
     <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
+
 
     <!--
         Extra rules from src
@@ -507,6 +508,12 @@
 
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcommentingdeprecatedannotationdeclarationsniff -->
     <!--<rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclarationSniff" />-->
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcontrolstructuresrequirenullsafeobjectoperator- -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullSafeObjectOperator" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsrequiretrailingcommaindeclaration- -->
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration" />
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>

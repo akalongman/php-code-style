@@ -42,50 +42,15 @@ trait MethodsTrait
 {
     use NamespacesTrait;
 
-    /**
-     * @var File
-     */
-    private $currentFile;
-
-    /**
-     * @var string
-     */
-    private $currentNamespace;
-
-    /**
-     * @var string[][]
-     */
-    private $importedClasses = [];
-
-    /**
-     * @var string
-     */
-    private $methodName;
-
-    /**
-     * @var bool
-     */
-    private $isSpecialMethod;
-
-    /**
-     * @var string
-     */
-    private $className;
-
-    /**
-     * @var string
-     */
-    private $parentClassName;
-
-    /**
-     * @var string[]
-     */
-    private $implementedInterfaceNames = [];
-
-    /**
-     * @var string[]
-     */
-    private $simpleReturnTypes = [
+    private File $currentFile;
+    private string $currentNamespace;
+    private array $importedClasses = [];
+    private string $methodName;
+    private bool $isSpecialMethod;
+    private string $className;
+    private string $parentClassName;
+    private array $implementedInterfaceNames = [];
+    private array $simpleReturnTypes = [
         'array',
         '?array',
         'bool',

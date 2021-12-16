@@ -15,17 +15,11 @@ use const T_DEFAULT;
 
 class DefaultAsLastSniff implements Sniff
 {
-    /**
-     * @return int[]
-     */
     public function register(): array
     {
         return [T_DEFAULT];
     }
 
-    /**
-     * @param int $stackPtr
-     */
     public function process(File $phpcsFile, $stackPtr): void
     {
         $tokens = $phpcsFile->getTokens();

@@ -28,20 +28,9 @@ class ImportInternalConstantSniff implements Sniff
 {
     use NamespacesTrait;
 
-    /**
-     * @var string[] Array of constants to exclude from importing.
-     */
-    public $exclude = [];
-
-    /**
-     * @var array Hash map of all php built in constant names.
-     */
-    private $builtInConstants;
-
-    /**
-     * @var array Array of imported constants in current namespace.
-     */
-    private $importedConstants;
+    public array $exclude = [];
+    private array $builtInConstants;
+    private array $importedConstants = [];
 
     public function __construct()
     {
@@ -60,7 +49,7 @@ class ImportInternalConstantSniff implements Sniff
      * @param int $stackPtr
      * @return int
      */
-    public function process(File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr): int
     {
         $tokens = $phpcsFile->getTokens();
 

@@ -9,12 +9,12 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 
 class DisallowHashCommentsSniff implements Sniff
 {
-    public function register()
+    public function register(): array
     {
         return [T_COMMENT];
     }
 
-    public function process(File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr): void
     {
         $tokens = $phpcsFile->getTokens();
         if ($tokens[$stackPtr]['content']{0} === '#') {

@@ -17,14 +17,14 @@ use const T_WHITESPACE;
 
 class BooleanNotSpacingSniff implements Sniff
 {
-    public $requiredSpacesAfterBooleanNot = 1;
+    public int $requiredSpacesAfterBooleanNot = 1;
 
-    public function register()
+    public function register(): array
     {
         return [T_IF];
     }
 
-    public function process(File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr): void
     {
         $this->requiredSpacesAfterBooleanNot = (int) $this->requiredSpacesAfterBooleanNot;
         $tokens = $phpcsFile->getTokens();

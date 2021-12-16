@@ -12,18 +12,12 @@ use const T_WHITESPACE;
 
 class NoConcatenationAtTheEndSniff implements Sniff
 {
-    /**
-     * @return int[]
-     */
     public function register(): array
     {
         return [T_STRING_CONCAT];
     }
 
-    /**
-     * @param int $stackPtr
-     */
-    public function process(File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr): void
     {
         $tokens = $phpcsFile->getTokens();
 

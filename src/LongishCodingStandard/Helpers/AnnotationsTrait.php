@@ -38,10 +38,8 @@ trait AnnotationsTrait
     /**
      * Annotation regular expression.
      * The same pattern is used (with case-insensitive modifier) to match PHPDoc tags.
-     *
-     * @var string
      */
-    public $annotationRegexp = '/@([A-Z][a-zA-Z0-9]*)\b/';
+    public string $annotationRegexp = '/@([A-Z][a-zA-Z0-9]*)\b/';
 
     /**
      * Allowed annotations in PHPDocs.
@@ -49,10 +47,8 @@ trait AnnotationsTrait
      *     - `null` - any annotation is allowed,
      *     - `[]` (empty array) - all annotations are not allowed,
      *     - `['ORM']` (specified values) - only specified annotations are allowed.
-     *
-     * @var null|string[]
      */
-    public $allowedAnnotations = [];
+    public ?array $allowedAnnotations = [];
 
     private function processAnnotations(File $phpcsFile, int $stackPtr): void
     {
@@ -146,20 +142,12 @@ trait AnnotationsTrait
         return $token + 1;
     }
 
-    /**
-     * @param null|string[] $tag
-     * @return false|int
-     */
-    private function isTag(string $content, ?array &$tag = null)
+    private function isTag(string $content, ?array &$tag = null): bool|int
     {
         return preg_match_all($this->annotationRegexp . 'i', $content, $tag);
     }
 
-    /**
-     * @param null|string[] $annotation
-     * @return false|int
-     */
-    private function isAnnotation(string $content, ?array &$annotation = null)
+    private function isAnnotation(string $content, ?array &$annotation = null): bool|int
     {
         return preg_match($this->annotationRegexp, $content, $annotation);
     }
