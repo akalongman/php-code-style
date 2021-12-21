@@ -161,10 +161,42 @@
 
     <!--
         Extra rules from src
+        Extra rules from https://github.com/PHPCSStandards/PHPCSExtra
         Extra rules from https://github.com/slevomat/coding-standard
     -->
 
-    <config name="installed_paths" value="../../../src,../../longman/php-code-style/src,../../slevomat/coding-standard"/>
+    <config name="installed_paths" value="../../../src,../../longman/php-code-style/src,../../phpcsstandards/phpcsextra,../../slevomat/coding-standard"/>
+
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalarraysduplicatearraykey-books -->
+    <rule ref="Universal.Arrays.DuplicateArrayKey"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalarraysmixedarraykeytypes-books -->
+    <rule ref="Universal.Arrays.MixedArrayKeyTypes">
+        <type>warning</type>
+    </rule>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalarraysmixedkeyedunkeyedarray-books -->
+    <rule ref="Universal.Arrays.MixedKeyedUnkeyedArray">
+        <type>warning</type>
+    </rule>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalconstantsuppercasemagicconstants-wrench-bar_chart-books -->
+    <rule ref="Universal.Constants.UppercaseMagicConstants"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalcontrolstructuresdisallowalternativesyntax-wrench-bar_chart-books -->
+    <rule ref="Universal.ControlStructures.DisallowAlternativeSyntax"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universaloperatorsdisallowlogicalandor-bar_chart-books -->
+    <rule ref="Universal.Operators.DisallowLogicalAndOr"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalusestatementslowercasefunctionconst-wrench-bar_chart-books -->
+    <rule ref="Universal.UseStatements.LowercaseFunctionConst"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalusestatementsnoleadingbackslash-wrench-bar_chart-books -->
+    <rule ref="Universal.UseStatements.NoLeadingBackslash"/>
+
+
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintstypehintdeclaration- -->
     <!--<rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration" />-->
@@ -561,7 +593,6 @@
     </rule>
 
     <!-- LongishCodingStandard rules -->
-    <rule ref="LongishCodingStandard.Arrays.DuplicateKey"/>
     <rule ref="LongishCodingStandard.ControlStructures.DefaultAsLast"/>
     <rule ref="LongishCodingStandard.NamingConventions.CamelCaseVariableName"/>
     <rule ref="LongishCodingStandard.PHP.ImportInternalConstant"/>

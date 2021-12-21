@@ -3,8 +3,11 @@
     "type": "phpcodesniffer-standard",
     "description": "Longish Code style configurations",
     "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": "^8.0",
+        "phpcsstandards/phpcsextra": "^1.0@alpha",
         "slevomat/coding-standard": "^7.0"
     },
     "require-dev": {
