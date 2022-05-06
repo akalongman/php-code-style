@@ -573,6 +573,7 @@
             <property name="ignoreSpacesInParameters" value="true"/>
             <property name="ignoreSpacesInAnnotation" value="true"/>
             <property name="ignoreSpacesInComment" value="true"/>
+            <property name="ignoreSpacesInMatch" value="true"/>
         </properties>
     </rule>
 
@@ -591,6 +592,9 @@
             <property name="nullPosition" value="first"/>
         </properties>
     </rule>
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsrequiretrailingcommainclosureuse- -->
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInClosureUse" />
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.ControlStructures.DefaultAsLast"/>
