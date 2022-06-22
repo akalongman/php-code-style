@@ -415,8 +415,8 @@
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintsparametertypehintspacing- -->
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
 
-    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardtypehintspropertytypehintspacing- -->
-    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHintSpacing"/>
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardclassespropertydeclaration- -->
+    <rule ref="SlevomatCodingStandard.Classes.PropertyDeclaration"/>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardnamespacesdisallowgroupuse -->
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
