@@ -232,7 +232,8 @@
                 <element value="private constants"/>
                 <element value="public properties, public static properties, protected properties, protected static properties, private properties, private static properties"/>
                 <element value="constructor, static constructors"/>
-                <element value="public methods, public static methods, public static abstract methods, public abstract methods, protected methods, protected static methods, protected static abstract methods, protected abstract methods, private methods, private static methods"/>
+                <element value="enum cases"/>
+                <element value="public methods, public final methods, public static methods, public static abstract methods, public static final methods, public abstract methods, protected methods, protected final methods, protected static methods, protected static abstract methods, protected static final methods, protected abstract methods, private methods, private static methods"/>
                 <element value="protected methods, protected static methods, protected static abstract methods, protected abstract methods, private methods, private static methods"/>
                 <element value="private methods, private static methods"/>
                 <element value="magic methods"/>
