@@ -589,7 +589,7 @@
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardtypehintsuniontypehintformat- -->
     <rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
         <properties>
-            <property name="withSpaces" value="no"/>
+            <property name="withSpaces" value="yes"/>
             <property name="nullPosition" value="first"/>
         </properties>
     </rule>
