@@ -196,6 +196,26 @@
     <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalusestatementsnoleadingbackslash-wrench-bar_chart-books -->
     <rule ref="Universal.UseStatements.NoLeadingBackslash"/>
 
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#modernizefunctioncallsdirname-wrench-books -->
+    <rule ref="Modernize.FunctionCalls.Dirname"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#normalizedarraysarraysarraybracespacing-wrench-bar_chart-books -->
+    <rule ref="NormalizedArrays.Arrays.ArrayBraceSpacing"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalclassesdisallowanonclassparentheses-wrench-bar_chart-books -->
+    <rule ref="Universal.Classes.DisallowAnonClassParentheses"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalcodeanalysisconstructordestructorreturn-wrench-books -->
+    <rule ref="Universal.CodeAnalysis.ConstructorDestructorReturn"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalcodeanalysisforeachuniqueassignment-wrench-books -->
+    <rule ref="Universal.CodeAnalysis.ForeachUniqueAssignment"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalcodeanalysisstaticinfinalclass-wrench-books -->
+    <rule ref="Universal.CodeAnalysis.StaticInFinalClass"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalconstantslowercaseclassresolutionkeyword-wrench-bar_chart-books -->
+    <rule ref="Universal.Constants.LowercaseClassResolutionKeyword"/>
 
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintstypehintdeclaration- -->
