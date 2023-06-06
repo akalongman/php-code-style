@@ -7,7 +7,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.0",
-        "phpcsstandards/phpcsextra": "^1.0@alpha",
+        "phpcsstandards/phpcsextra": "^1.0",
         "slevomat/coding-standard": "^8.0"
     },
     "require-dev": {
