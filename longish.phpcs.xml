@@ -217,6 +217,12 @@
     <!-- https://github.com/PHPCSStandards/PHPCSExtra#universalconstantslowercaseclassresolutionkeyword-wrench-bar_chart-books -->
     <rule ref="Universal.Constants.LowercaseClassResolutionKeyword"/>
 
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra?tab=readme-ov-file#universalcodeanalysisnodoublenegative-wrench-books -->
+    <rule ref="Universal.CodeAnalysis.NoDoubleNegative"/>
+
+    <!-- https://github.com/PHPCSStandards/PHPCSExtra?tab=readme-ov-file#universaloperatorsconcatposition-wrench-bar_chart-books -->
+    <rule ref="Universal.Operators.ConcatPosition"/>
+
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintstypehintdeclaration- -->
     <!--<rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration" />-->
