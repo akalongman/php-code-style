@@ -623,6 +623,45 @@
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsrequiretrailingcommainclosureuse- -->
     <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInClosureUse" />
 
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsnamedargumentspacing- -->
+    <rule ref="SlevomatCodingStandard.Functions.NamedArgumentSpacing" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardarraysarrayaccess- -->
+    <rule ref="SlevomatCodingStandard.Arrays.ArrayAccess" />
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardarraysarrayaccess- -->
+    <!--    <rule ref="SlevomatCodingStandard.Commenting.AnnotationName" />-->
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardstringsdisallowvariableparsing -->
+    <rule ref="SlevomatCodingStandard.Strings.DisallowVariableParsing">
+        <properties>
+            <property name="disallowDollarCurlySyntax" value="yes"/>
+            <property name="disallowCurlyDollarSyntax" value="yes"/>
+            <property name="disallowSimpleSyntax" value="yes"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard/blob/master/doc/classes.md#slevomatcodingstandardclassesrequireselfreference- -->
+    <!--<rule ref="SlevomatCodingStandard.Classes.RequireSelfReference" />-->
+
+    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardcomplexitycognitive -->
+    <rule ref="SlevomatCodingStandard.Complexity.Cognitive">
+        <type>warning</type>
+        <properties>
+            <property name="warningThreshold" value="10"/>
+            <property name="errorThreshold" value="30"/>
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.Files.FileLength">
+        <type>warning</type>
+        <properties>
+            <property name="includeComments" value="no"/>
+            <property name="includeWhitespace" value="yes"/>
+            <property name="maxLinesLength" value="500"/>
+        </properties>
+    </rule>
+
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.ControlStructures.DefaultAsLast"/>
     <rule ref="LongishCodingStandard.NamingConventions.CamelCaseVariableName"/>
