@@ -53,7 +53,6 @@
     <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
     <rule ref="Generic.Formatting.SpaceAfterCast.NoSpace"/>
 
-    <rule ref="Generic.Functions.CallTimePassByReference"/>
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
 
     <rule ref="Generic.Metrics.NestingLevel">
@@ -513,14 +512,6 @@
         <type>warning</type>
     </rule>
 
-    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsfunctionlength- -->
-    <!--<rule ref="SlevomatCodingStandard.Functions.FunctionLength">
-        <type>warning</type>
-        <properties>
-            <property name="maxLinesLength" value="50"/>
-        </properties>
-    </rule> -->
-
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardphpdisallowdirectmagicinvokecall- -->
     <rule ref="SlevomatCodingStandard.PHP.DisallowDirectMagicInvokeCall"/>
 
@@ -612,14 +603,6 @@
         </properties>
     </rule>
 
-    <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardtypehintsuniontypehintformat- -->
-    <rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
-        <properties>
-            <property name="withSpaces" value="yes"/>
-            <property name="nullPosition" value="first"/>
-        </properties>
-    </rule>
-
     <!-- https://github.com/slevomat/coding-standard#slevomatcodingstandardfunctionsrequiretrailingcommainclosureuse- -->
     <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInClosureUse" />
 
@@ -661,6 +644,27 @@
             <property name="maxLinesLength" value="500"/>
         </properties>
     </rule>
+
+    <!-- https://github.com/slevomat/coding-standard/blob/master/doc/type-hints.md#slevomatcodingstandardtypehintsclassconstanttypehint- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.ClassConstantTypeHint">
+        <type>warning</type>
+        <properties>
+            <property name="enableNativeTypeHint" value="yes"/>
+        </properties>
+    </rule>
+
+    <!-- https://github.com/slevomat/coding-standard/blob/master/doc/type-hints.md#slevomatcodingstandardtypehintsdnftypehintformat- -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DNFTypeHintFormat">
+        <type>warning</type>
+        <properties>
+            <property name="withSpacesAroundOperators" value="yes"/>
+            <property name="withSpacesInsideParentheses" value="no"/>
+            <property name="shortNullable" value="yes"/>
+            <property name="nullPosition" value="first"/>
+        </properties>
+    </rule>
+
+
 
     <!-- LongishCodingStandard rules -->
     <rule ref="LongishCodingStandard.ControlStructures.DefaultAsLast"/>
