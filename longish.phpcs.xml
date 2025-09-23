@@ -114,8 +114,6 @@
     <!--<rule ref="PEAR.ControlStructures.MultiLineCondition"/>-->
     <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
 
-    <rule ref="MySource.PHP.EvalObjectFactory"/>
-    <rule ref="MySource.PHP.GetRequestData"/>
     <!--
     <rule ref="MySource.PHP.ReturnFunctionValue"/>
     -->
@@ -126,7 +124,7 @@
         <type>warning</type>
     </rule>
     <rule ref="Squiz.WhiteSpace.CastSpacing"/>
-    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
     <!--
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
     -->
@@ -469,9 +467,14 @@
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcommentingforbiddenannotations- -->
     <rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
-        <properties>
-            <property name="forbiddenAnnotations" type="array" value="@author,@created,@version,@package,@copyright,@license"/>
-        </properties>
+        <property name="forbiddenAnnotations" type="array">
+            <element value="@author"/>
+            <element value="@created"/>
+            <element value="@version"/>
+            <element value="@package"/>
+            <element value="@copyright"/>
+            <element value="@license"/>
+        </property>
     </rule>
 
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardcommentingforbiddencomments- -->
