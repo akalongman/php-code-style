@@ -221,6 +221,12 @@
     <rule ref="Universal.Operators.ConcatPosition"/>
 
 
+    <rule ref="Universal.Attributes.BracketSpacing"/>
+    <rule ref="Universal.Attributes.DisallowAttributeParentheses"/>
+    <rule ref="Universal.Attributes.TrailingComma"/>
+    <rule ref="Universal.WhiteSpace.FirstClassCallableSpacing"/>
+
+
     <!-- https://github.com/slevomat/coding-standard/tree/5.0.4#slevomatcodingstandardtypehintstypehintdeclaration- -->
     <!--<rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration" />-->
 
